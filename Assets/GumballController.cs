@@ -6,7 +6,7 @@ public class GumballController : MonoBehaviour
 {
     [SerializeField] private float speed = 1.0f; // speed in meters per second
     private float time = 1.0f;
-    private int score = 0;
+    private static int score = 0;
     private bool left = false;
     private bool right = false;
 
