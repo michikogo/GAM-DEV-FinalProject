@@ -1,21 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class GumballController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 1.0f; // speed in meters per second
+    [SerializeField] private Text countText;
+    [SerializeField] private float speed = 5.0f; // speed in meters per second
     private float time = 1.0f;
     private static int score = 0;
     private bool left = false;
     private bool right = false;
-
 
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Hello");
         LevelManager.Initialize();
+        SetCountText();
     }
 
     // Update is called once per frame
@@ -82,21 +84,21 @@ public class GumballController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Safe")
         {
-            score += 5;
+            score += 1;
             Debug.Log(score);
+            SetCountText();
         }
         if(collision.gameObject.tag == "End")
         {
             Debug.Log("I am inside the portal");
+            speed += 1;
             LevelManager.Instance.loadLevel();
         }
     }
 
-    // Delay player movement
-    IEnumerator Example()
+    public void SetCountText()
     {
-        print(Time.time);
-        yield return new WaitForSeconds(5);
-        print(Time.time);
+        countText.text = score.ToString();
     }
+
 }

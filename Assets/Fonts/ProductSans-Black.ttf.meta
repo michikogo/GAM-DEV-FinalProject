@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d964e654ea2b7494abfded0045a4abcf
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Product Sans Black
+  fontNames:
+  - Product Sans Black
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 785283d568a80264bac702876fee4b51, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
