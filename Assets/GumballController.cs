@@ -5,7 +5,6 @@ using UnityEngine;
 public class GumballController : MonoBehaviour
 {
     [SerializeField] private float speed = 1.0f; // speed in meters per second
-    [SerializeField] private Transform portalTransform; // portal to get the gameobject
     private float smooth = 5.0f;
     private int score = 0;
     private bool left = false;
@@ -15,6 +14,8 @@ public class GumballController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Hello");
+        LevelManager.Initialize();
     }
 
     // Update is called once per frame
@@ -55,6 +56,11 @@ public class GumballController : MonoBehaviour
             this.transform.localPosition = pos3;
             // Debug.Log("Left");
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
     
     void OnCollisionEnter(Collision collision)
@@ -68,6 +74,11 @@ public class GumballController : MonoBehaviour
         {
             score += 5;
             Debug.Log(score);
+        }
+        if(collision.gameObject.tag == "End")
+        {
+            Debug.Log("I am inside the portal");
+            LevelManager.Instance.loadLevel();
         }
     }
 }
