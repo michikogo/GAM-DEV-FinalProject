@@ -8,12 +8,14 @@ public class LevelManager
     private static LevelManager sharedInstance = null;
     private string currentScene = "Level5";
     //private string MENU = "SceneMenu";
+    // Level 1-10
     private string LEVEL_ONE = "Level1";
     private string LEVEL_TWO = "Level2";
     private string LEVEL_THREE = "Level3";
     private string LEVEL_FOUR = "Level4";
     private string LEVEL_FIVE = "Level5";
     private string LEVEL_SIX = "Level6";
+    private string LEVEL_SEVEN = "Level7";
 
     private LevelManager()
     {
@@ -54,6 +56,8 @@ public class LevelManager
             this.currentScene = LEVEL_FIVE;
         else if (this.currentScene == LEVEL_FIVE)
             this.currentScene = LEVEL_SIX;
+        else if (this.currentScene == LEVEL_SIX)
+            this.currentScene = LEVEL_SEVEN;
 
         Debug.Log(this.currentScene);
         SceneManager.LoadScene(this.currentScene);
