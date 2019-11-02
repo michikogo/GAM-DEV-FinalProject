@@ -11,6 +11,7 @@ public class LevelManager
     private string LEVEL_ONE = "Level1";
     private string LEVEL_TWO = "Level2";
     private string LEVEL_THREE = "Level3";
+    private string LEVEL_FOUR = "Level4";
 
     private LevelManager()
     {
@@ -39,19 +40,17 @@ public class LevelManager
         // this.currentScene = sceneName;
         // SceneManager.LoadScene(this.currentScene);
         if (this.currentScene == LEVEL_ONE)
-        {
             this.currentScene = LEVEL_ONE;
-        }
-        if (this.currentScene == LEVEL_ONE)
-        {
-            this.currentScene = LEVEL_TWO;
-        }
-        else if (this.currentScene == LEVEL_TWO)
-        {
-            this.currentScene = LEVEL_THREE;
-        }
-        Debug.Log(this.currentScene);
 
+        if (this.currentScene == LEVEL_ONE)
+            this.currentScene = LEVEL_TWO;
+        else if (this.currentScene == LEVEL_TWO)
+            this.currentScene = LEVEL_THREE;
+        else if (this.currentScene == LEVEL_THREE )
+            this.currentScene = LEVEL_FOUR;
+
+
+        Debug.Log(this.currentScene);
         SceneManager.LoadScene(this.currentScene);
     }
 
