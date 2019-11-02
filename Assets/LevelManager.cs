@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 public class LevelManager
 {
     private static LevelManager sharedInstance = null;
-    private string currentScene = "Level4";
+    private string currentScene = "Level5";
     //private string MENU = "SceneMenu";
     private string LEVEL_ONE = "Level1";
     private string LEVEL_TWO = "Level2";
     private string LEVEL_THREE = "Level3";
     private string LEVEL_FOUR = "Level4";
     private string LEVEL_FIVE = "Level5";
+    private string LEVEL_SIX = "Level6";
 
     private LevelManager()
     {
@@ -43,15 +44,16 @@ public class LevelManager
         if (this.currentScene == LEVEL_ONE)
             this.currentScene = LEVEL_ONE;
 
-        //        if (this.currentScene == LEVEL_ONE)
-        //            this.currentScene = LEVEL_TWO;
-        //else if (this.currentScene == LEVEL_TWO)
-        //  this.currentScene = LEVEL_THREE;
-        //else
-        if (this.currentScene == LEVEL_THREE)
+        if (this.currentScene == LEVEL_ONE)
+            this.currentScene = LEVEL_TWO;
+        else if (this.currentScene == LEVEL_TWO)
+            this.currentScene = LEVEL_THREE;
+        else if (this.currentScene == LEVEL_THREE)
             this.currentScene = LEVEL_FOUR;
         else if (this.currentScene == LEVEL_FOUR)
             this.currentScene = LEVEL_FIVE;
+        else if (this.currentScene == LEVEL_FIVE)
+            this.currentScene = LEVEL_SIX;
 
         Debug.Log(this.currentScene);
         SceneManager.LoadScene(this.currentScene);
