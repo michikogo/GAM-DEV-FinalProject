@@ -48,6 +48,7 @@ public class LevelManager
     {
         // this.currentScene = sceneName;
         // SceneManager.LoadScene(this.currentScene);
+
         if (this.currentScene == LEVEL_ONE)
             this.currentScene = LEVEL_ONE;
 
