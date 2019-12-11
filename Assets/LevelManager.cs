@@ -21,6 +21,17 @@ public class LevelManager
     private string LEVEL_TEN = "Level10";
     // Emission
     private string LEVEL_ELEVEN = "Level11";
+    private string LEVEL_TWELVE = "Level12";
+    private string LEVEL_THIRTEEN = "Level13";
+    private string LEVEL_FOURTEEN = "Level14";
+    private string LEVEL_FIFTEEN = "Level15";
+    private string LEVEL_SIXTEEN = "Level16";
+    private string LEVEL_SEVENTEEN = "Level17";
+    private string LEVEL_EIGHTEEN = "Level18";
+    private string LEVEL_NINETEEN = "Level19";
+    private string LEVEL_TWENTY = "Level20";
+    // Winner
+    private string WINNER = "Winner";
 
     private LevelManager()
     {
@@ -73,6 +84,27 @@ public class LevelManager
         // Emission
         else if (this.currentScene == LEVEL_TEN)
             this.currentScene = LEVEL_ELEVEN;
+        else if (this.currentScene == LEVEL_ELEVEN)
+            this.currentScene = LEVEL_TWELVE;
+        else if (this.currentScene == LEVEL_TWELVE)
+            this.currentScene = LEVEL_THIRTEEN;
+        else if (this.currentScene == LEVEL_THIRTEEN)
+            this.currentScene = LEVEL_FOURTEEN;
+        else if (this.currentScene == LEVEL_FOURTEEN)
+            this.currentScene = LEVEL_FIFTEEN;
+        else if (this.currentScene == LEVEL_FIFTEEN)
+            this.currentScene = LEVEL_SIXTEEN;
+        else if (this.currentScene == LEVEL_SIXTEEN)
+            this.currentScene = LEVEL_SEVENTEEN;
+        else if (this.currentScene == LEVEL_SEVENTEEN)
+            this.currentScene = LEVEL_EIGHTEEN;
+        else if (this.currentScene == LEVEL_EIGHTEEN)
+            this.currentScene = LEVEL_NINETEEN;
+        else if (this.currentScene == LEVEL_NINETEEN)
+            this.currentScene = LEVEL_TWENTY;
+        // Winner
+        else if (this.currentScene == LEVEL_TWENTY)
+            this.currentScene = WINNER;
 
         Debug.Log(this.currentScene);
         SceneManager.LoadScene(this.currentScene);
